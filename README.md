@@ -1,6 +1,6 @@
 ## soccersimu
 
-This simulation is about how the outcome of group-stage matches of soccer can be "predicted" by a logistic regression or neural network, or other machine learning methods, given only the numbers of goals in each game by each team.
+This simulation is about how the outcome of group-stage matches of soccer can be "predicted" by some machine learning methods, given only the numbers of goals in each game by each team.
 
 Imagine some aliens have watched all the group stage matches, learned the goal numbers for all teams in all matches,
 and have been informed the outcome (i.e. which two teams in each group of four have entered the elimination stage),
@@ -12,12 +12,19 @@ In this study, I generate a set of group match data and calculate the 'true' out
 
  The ranking rules I used are as follows:(modified from the UEFA European Championship rules)
  firstly, use the accumulated points (win -> 3, draw -> 1, lose -> 0)
+ 
  If two or more teams are equal on points on completion of the group matches:
+ 
  a) winning relationship, if two teams finish equal on points, or when only two teams get a equal mark at any following calculation stage;
+ 
  b) superior goal difference in the matches among the teams in question, if more than two teams finish equal on points;
+ 
  c) higher number of goals scored in the matches among the teams in question, if more than two teams finish equal on points;
+ 
  d) superior goal difference in all the group matches;
+ 
  e) higher number of goals scored in all the group matches;
+ 
  f) random choice (throwing dices)
 
 Below is how I structure the data and do the programming:
@@ -33,4 +40,6 @@ In getWinmatrix() another pre-written function, teamscore(), is called in, which
 
 To do one-vs-all classification, note there are only six possible outcomes. Each possible y[i], like c(1,1,0,0) or c(1,0,1,0) has to be transformed into something like y[i]=1 or y[i]=2, and then into y[i]=c(1,0,0,0,0,0) or y[i]=c(0,2,0,0,0,0). An octave function, transformY(), was written to do this transformation.
 
-To play with this analysis, just generate your own x and y matrices, with training, validation and test sets, and code your own regression or neural network to see how well they can 'predict' the y from the x. It might be breaking news if you manage up to >99% accuracy, and don't forget to share it!
+My own Octave codes for this analysis are adapted from the resource in the online course "Machine learning" on Coursera by Dr. Andrew Ng in Stanford University. I am not going to publish the codes here due to the course requirement. At this stage I managed to get prediction accuracy at ~92% with logistic regression and ~94% with neural network (with single hidden layer). Will come back if I get a higher performance.
+
+To play with this analysis, just use my codes here to generate your own x and y matrices, with training, validation and test sets, and code your own regression or neural network to see how well they can 'predict' the y from the x. It would be great news if you manage up to >99% accuracy.
