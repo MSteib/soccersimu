@@ -15,3 +15,13 @@ DC=rpois(300, 2)
 scores1 = data.frame(AB,BA,AC,CA,AD,DA,BC,CB,BD,DB,CD,DC)
 
 # so you have got an original score data file to start with.
+
+# Each time yo generate a score data, just call the getWinmatrix() function.
+source("getWinmatrix.r")
+# And generate the outcome data matrix
+matrix1 = getWinmatrix(scores1)
+
+# Write the X and y data into separate csv files, so they can be read by other software.
+write.csv(scores1, file="scoresx.csv", row.names = F)
+write.csv(matrix1, file="outcomey.csv", row.names = F)
+
