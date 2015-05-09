@@ -1,5 +1,5 @@
-# In R or Rstudio, To start with an example data, generate 300 records of groups' goal numbers, or 1000 or more if you like.
-# Poisson distribution with lambla=2 is used for the goal number in each game for each team, which is most realistic
+# In R or Rstudio, To start with an example data, generate 300 records of groups' goal numbers, or more if you like.
+# Poisson distribution with lambda=2 is used for the goal number in each game for each team, which is most realistic to me.
 AB=rpois(300, 2)
 BA=rpois(300, 2)
 AC=rpois(300, 2)
