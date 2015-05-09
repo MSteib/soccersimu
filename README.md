@@ -42,4 +42,4 @@ To do one-vs-all classification, note there are only six possible outcomes. Each
 
 My own Octave codes for this analysis are adapted from the resource in the online course "Machine learning" on Coursera by Dr. Andrew Ng in Stanford University. I am not going to publish the codes here due to the course requirement. At this stage I managed to get prediction accuracy at ~92% with logistic regression and ~94% with neural network (with single hidden layer). Will come back if I get a higher performance.
 
-To play with this analysis, just use my codes here to generate your own x and y matrices, with training, validation and test sets, and code your own regression or neural network to see how well they can 'predict' the y from the x. It would be great news if you manage up to >99% accuracy.
+To play with this analysis, just use my codes here to generate your own x and y matrices, with training, validation and test sets, and code your own regression or neural network to see how well they can 'predict' the y from the x. It would be great news if you manage up to >99% accuracy, without adding new features other than the 12-column goal numbers.
