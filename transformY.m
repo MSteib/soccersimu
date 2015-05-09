@@ -6,7 +6,7 @@ function yy = transformY(yyy)
 % e.g. [1,0,0,0,0,0] or [0,0,1,0,0,0]
 
 yy = zeros(size(yyy,1),6);
-y1 = yyy(:,1).+ 2.*yyy(:,2) + 3.*yyy(:,3) + 5.*yyy(:,4) .-2;
+y1 = yyy(:,1).+ 2.*yyy(:,2) .+ 3.*yyy(:,3) .+ 5.*yyy(:,4) .-2;
 yy = ((1: size(yy,2))==y1); 
 yy = double(yy);
 
