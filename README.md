@@ -11,18 +11,18 @@ They might try to guess the rules, making more and more talent/complex hypothese
 
 In this study, I generate a set of group match data and calculate the 'true' outcomes based on a set of rules which are similar to European Championship rules, then I will create a logistic regression programme and neural networks, to let them try to predict the outcomes, and see how well they can predict.
 
-## The ranking rules I used are as follows:(modified from the UEFA European Championship rules)
-## firstly, use the accumulated points (win -> 3, draw -> 1, lose -> 0)
-## If two or more teams are equal on points on completion of the group matches: 
-## a) winning relationship, if two teams finish equal on points, 
-##    or when only two teams get a equal mark at any following calculation stage;
-## b) superior goal difference in the matches among the teams in question, if more
-##    than two teams finish equal on points;
-## c) higher number of goals scored in the matches among the teams in question, if
-##    more than two teams finish equal on points;
-## d) superior goal difference in all the group matches;
-## e) higher number of goals scored in all the group matches;
-## f) random choice (throwing dices)
+ The ranking rules I used are as follows:(modified from the UEFA European Championship rules)
+ firstly, use the accumulated points (win -> 3, draw -> 1, lose -> 0)
+ If two or more teams are equal on points on completion of the group matches: 
+ a) winning relationship, if two teams finish equal on points, 
+    or when only two teams get a equal mark at any following calculation stage;
+ b) superior goal difference in the matches among the teams in question, if more
+    than two teams finish equal on points;
+ c) higher number of goals scored in the matches among the teams in question, if
+    more than two teams finish equal on points;
+ d) superior goal difference in all the group matches;
+ e) higher number of goals scored in all the group matches;
+ f) random choice (throwing dices)
 
 Below is how I structure the data and do the programming
 
