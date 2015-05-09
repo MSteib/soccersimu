@@ -38,7 +38,7 @@ For example, if y[i]=c(1,1,0,0) for a record, that means in this group, teams A 
 
 In getWinmatrix() another pre-written function, teamscore(), is called in, which calculate the accumulated scores/points of each team when the group stage is finished. Make sure the two .r files for the two functions are included in the working directory.
 
-To do one-vs-all classification, note there are only six possible outcomes. Each possible y[i], like c(1,1,0,0) or c(1,0,1,0) has to be transformed into something like y[i]=1 or y[i]=2, and then into y[i]=c(1,0,0,0,0,0) or y[i]=c(0,2,0,0,0,0). An octave function, transformY(), was written to do this transformation.
+To do one-vs-all classification, note there are only six possible outcomes. Each possible y[i], like c(1,1,0,0) or c(1,0,1,0) has to be transformed into something like y[i]=1 or y[i]=2, and then into y[i]=c(1,0,0,0,0,0) or y[i]=c(0,1,0,0,0,0). An octave function, transformY(), was written to do this transformation.
 
 My own Octave codes for this analysis are adapted from the resource in the online course "Machine learning" on Coursera by Dr. Andrew Ng in Stanford University. I am not going to publish the codes here due to the course requirement. At this stage I managed to get prediction accuracy at ~92% with logistic regression and ~94% with neural network (with single hidden layer). Not very exciting. Will come back if I can improve my codes and get a higher performance.
 
