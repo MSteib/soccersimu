@@ -7,7 +7,6 @@ function yy = transformY(yyy)
 
 yy = zeros(size(yyy,1),6);
 y1 = yyy(:,1).+ 2.*yyy(:,2) .+ 3.*yyy(:,3) .+ 5.*yyy(:,4) .-2;
-yy = ((1: size(yy,2))==y1); 
-yy = double(yy);
+yy = double((1: size(yy,2))==y1); 
 
 end
