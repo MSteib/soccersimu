@@ -1,30 +1,26 @@
 ## soccersimu
-## Some R and Octave codes to see if machine learning can 'predict' the outcome of each group match by only looking into the goal numbers.
 
-This simulation is about how the outcome of group-stage matches of soccer can be "predicted" by a logistic regression or neural network, given only the numbers of goals in each game by each team.
- 
-Imagine a group of aliens have watched all the group stage matches, learned the goal numbers for all teams in all matches,
-and have been informed the outcome (i.e. which teams have entered the elimination stage),
+This simulation is about how the outcome of group-stage matches of soccer can be "predicted" by a logistic regression or neural network, or other machine learning methods, given only the numbers of goals in each game by each team.
+
+Imagine some aliens have watched all the group stage matches, learned the goal numbers for all teams in all matches,
+and have been informed the outcome (i.e. which two teams in each group of four have entered the elimination stage),
 but they don't know anything about the soccer rules on our planet.
- 
-They might try to guess the rules, making more and more talent/complex hypotheses and test them with the informed outcomes, or simply, they just use a logistic regression or neural network to 'blindly' establish a predictive model, and make 'predictions' like we are doing in this 'big data' era.
 
-In this study, I generate a set of group match data and calculate the 'true' outcomes based on a set of rules which are similar to European Championship rules, then I will create a logistic regression programme and neural networks, to let them try to predict the outcomes, and see how well they can predict.
+They might try to guess the rules (like "maybe kicking more goals would increase the chance to enter the next stage"), making more and more talent/complex hypotheses and test them with the informed outcomes. Or simply, they just use a logistic regression or neural network to 'blindly' establish a predictive model, and make predictions and inference like we are doing in this 'big data' era.
+
+In this study, I generate a set of group match data and calculate the 'true' outcomes based on a set of rules which are similar to European Championship rules, then I will create a logistic regression programme and neural networks, to let them try to predict the outcomes, and see how well they can predict. (Using historical data from UEFA may be another choice, but I personally think this data is too small.)
 
  The ranking rules I used are as follows:(modified from the UEFA European Championship rules)
  firstly, use the accumulated points (win -> 3, draw -> 1, lose -> 0)
- If two or more teams are equal on points on completion of the group matches: 
- a) winning relationship, if two teams finish equal on points, 
-    or when only two teams get a equal mark at any following calculation stage;
- b) superior goal difference in the matches among the teams in question, if more
-    than two teams finish equal on points;
- c) higher number of goals scored in the matches among the teams in question, if
-    more than two teams finish equal on points;
+ If two or more teams are equal on points on completion of the group matches:
+ a) winning relationship, if two teams finish equal on points, or when only two teams get a equal mark at any following calculation stage;
+ b) superior goal difference in the matches among the teams in question, if more than two teams finish equal on points;
+ c) higher number of goals scored in the matches among the teams in question, if more than two teams finish equal on points;
  d) superior goal difference in all the group matches;
  e) higher number of goals scored in all the group matches;
  f) random choice (throwing dices)
 
-Below is how I structure the data and do the programming
+Below is how I structure the data and do the programming:
 
 Each record of data represents a group of four teams (A, B, C, D), containing all the 12 goal numbers in the six games among them.
 These are considered as known, independent variables (x1, x2, ... x12), in this simulation they are given the names "AB" (goal number of team A in the game between A and B), "BA", "AC", ...
