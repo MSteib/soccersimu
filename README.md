@@ -33,4 +33,4 @@ In getWinmatrix() another pre-written function, teamscore(), is called in, which
 
 To do one-vs-all classification, note there are only six possible outcomes. Each possible y[i], like c(1,1,0,0) or c(1,0,1,0) has to be transformed into something like y[i]=1 or y[i]=2, and then into y[i]=c(1,0,0,0,0,0) or y[i]=c(0,2,0,0,0,0). An octave function, transformY(), was written to do this transformation.
 
-To play with this analysis, just generate your own x and y matrices, set up training, validation and test sets, and code your own regression or neural network to see how well they can 'predict' the y from the x.
+To play with this analysis, just generate your own x and y matrices, with training, validation and test sets, and code your own regression or neural network to see how well they can 'predict' the y from the x. Please share the good news if you manage up to >98% accuracy!
