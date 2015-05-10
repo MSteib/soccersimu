@@ -17,5 +17,5 @@ ytest = transformY(ytest);
 % Now you can build your own machine learning algorithms, train them with X and y,
 % validate and optimise them with Xval and yval, and 
 % test them with Xtest and ytest.
-% My practice has given a 92% accuracy with logistic regression and 94% with neural network (with a single hidden layer).
+% My practice has given a 74% accuracy with logistic regression and 82% with neural network (with a single hidden layer).
 % See how you may improve this. Good luck!
