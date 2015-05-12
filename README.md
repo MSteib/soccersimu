@@ -1,17 +1,17 @@
 ## soccersimu
 
-This simulation is about how the outcome of group-stage matches of soccer can be "predicted" by some machine learning methods, given only the numbers of goals in each game by each team.
+This simulation is about how the outcome of group-stage matches of soccer can be "predicted" by some machine learning methods, given only the numbers of goals in each game by each team. Essentially, it is said a well built neural network algorithm can 'resemble' lots of complex, non-linear functions, successfully predicting y for every single x without need to tackle what f(x) really is. With the motivation to see if this super power of neural networks will show up, I am doing this experiment. 
 
 Imagine some aliens have watched all the group stage matches, learned the goal numbers for all teams in all matches,
 and have been informed the outcome (i.e. which two teams in each group of four have entered the elimination stage),
 but they don't know anything about the soccer rules on our planet.
 
-They might try to guess the rules (like "maybe kicking more goals would increase the chance to enter the next stage"), making more and more talent/complex hypotheses and test them with the informed outcomes. Or simply, they just use a logistic regression or neural network to 'blindly' establish a predictive model, and make predictions and inference like we are doing in this 'big data' era.
+They might try to guess out the rules (like "maybe kicking more goals would increase the chance to enter the next stage"), making more and more talent/complex hypotheses and test them with the informed outcomes. Or simply, they just use a logistic regression or neural network to 'blindly' establish a predictive model, and make predictions and inference like we are doing in this 'big data' era.
 
 In this study, I generate a set of group match data and calculate the 'true' outcomes based on a set of rules which are similar to European Championship rules, then I will create a logistic regression programme and neural networks, to let them try to predict the outcomes, and see how well they can predict. (Using historical data from UEFA may be another choice, but I personally think this data is too small.)
 
- The ranking rules I used are as follows:(modified from the UEFA European Championship rules)
- firstly, use the accumulated points (win -> 3, draw -> 1, lose -> 0)
+The ranking rules I used are as follows:(modified from the UEFA European Championship rules)
+ Firstly, use the accumulated points (win -> 3, draw -> 1, lose -> 0)
  
  If two or more teams are equal on points on completion of the group matches:
  
@@ -40,8 +40,12 @@ In getWinmatrix() another pre-written function, teamscore(), is called in, which
 
 To do one-vs-all classification, note there are only six possible outcomes. Each possible y[i], like c(1,1,0,0) or c(1,0,1,0) has to be transformed into something like y[i]=1 or y[i]=2, and then into y[i]=c(1,0,0,0,0,0) or y[i]=c(0,1,0,0,0,0). An octave function, transformY(), was written to do this transformation.
 
-My own Octave codes for this analysis are adapted from the resource in the online course "Machine learning" on Coursera by Dr. Andrew Ng in Stanford University. I am not going to publish the codes here due to the course requirement. At this stage I managed to get prediction accuracy at ~74% with logistic regression and ~82% with neural network with a single hidden layer. Not very exciting. Will come back if I can improve my codes and get a higher performance. 
+My own Octave codes for this analysis are adapted from the resource in the online course "Machine learning" on Coursera by Dr. Andrew Ng in Stanford University. I am not going to publish the modelling codes here due to the course requirement.
 
-To play with this analysis, just use my codes here to generate your own x and y matrices, with training, validation and test sets, and code your own regression or neural network to see how well they can 'predict' the y from the x. It would be great news if you manage up to >95% accuracy.
+At this stage, I have found that the training sample size has to be >=3000 to get a steady, reasonable prediction accuracy. Using a neural network with single hidden layer of 40 units, I got a prediction accuracy of 88.5-89%, and using a neural network with double hidden layers, each with 32 units, I got it 91.5-92%.
+
+Because my training, validation and test sets are essentially from the same population, in theory overfitting shouldn't be a problem, especially when you use the recommended sample size >=3000. Using regularization with lambda>=0.5 can only decrease the predictivity.
+
+To play with this experiment, just use my R codes here to generate your own x and y matrices, building your training, validation and test sets, and code your own regression, svm or neural networks to see how well they can 'predict' the y from the x. It would be great if you manage up to >95% accuracy. If you get it >98%, please let me know the breaking news and I will appreciate it very much.
 
 Please start from 'startanalysis.r' and then 'startOctave.m'. R and Octave/Matlab will be used.
