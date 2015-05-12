@@ -1,29 +1,29 @@
 getWinmatrix <- function(originalscore) {
     ## The input originalscore is a m*12 data file,
-	## with m records of 12 column variables named 'AB' 'BA' 'AC' ... 'DC'
-	## the values are integers from 0 to >10
-	## The returned variable is a dataframe with m*4 dimension, all 0 or 1 values
-	## must be two 0s and two 1s for each row
-	## 2015-05-06
+    ## with m records of 12 column variables named 'AB' 'BA' 'AC' ... 'DC'
+    ## the values are integers from 0 to >10
+    ## The returned variable is a dataframe with m*4 dimension, all 0 or 1 values
+    ## must be two 0s and two 1s for each row
+    ## 2015-05-06
     source("teamscore.R")
-	TscoreA = teamscore("A", originalscore)
+    TscoreA = teamscore("A", originalscore)
     TscoreB = teamscore("B", originalscore)
     TscoreC = teamscore("C", originalscore)
     TscoreD = teamscore("D", originalscore)
 	
-	ABCD = c("A","B","C","D")
-	
-	selectA = rep(0, nrow(originalscore))
-	selectB = rep(0, nrow(originalscore))
-	selectC = rep(0, nrow(originalscore))
-	selectD = rep(0, nrow(originalscore))
-	selectMatrix = data.frame(selectA,selectB,selectC,selectD)
+    ABCD = c("A","B","C","D")
+    
+    selectA = rep(0, nrow(originalscore))
+    selectB = rep(0, nrow(originalscore))
+    selectC = rep(0, nrow(originalscore))
+    selectD = rep(0, nrow(originalscore))
+    selectMatrix = data.frame(selectA,selectB,selectC,selectD)
     names(selectMatrix) = ABCD
 	
 	for (i in 1:nrow(originalscore)) {
-	    Asc = TscoreA[i]
+	        Asc = TscoreA[i]
 		Bsc = TscoreB[i]
-	    Csc = TscoreC[i]
+	        Csc = TscoreC[i]
 		Dsc = TscoreD[i]
 		grpscore = c(Asc, Bsc, Csc, Dsc)
 		odrscore = sort(grpscore, decreasing = T, index.return = T)$x
@@ -264,7 +264,7 @@ getWinmatrix <- function(originalscore) {
 		    # firstly, team1 is guaranteed
 		    selectMatrix[[grpoder[1]]][i] = 1
 
-           # Below is the superior goals for team2, team3 and team4, not considering the matches against team1
+                # Below is the superior goals for team2, team3 and team4, not considering the matches against team1
 			
 			df2 = df24 + df23
 			df3 = df34 + df32
@@ -293,7 +293,7 @@ getWinmatrix <- function(originalscore) {
 			ttsc3 = originalscore[[str34]][i] +originalscore[[str32]][i]
 			ttsc4 = originalscore[[str42]][i] +originalscore[[str43]][i]
 			
-            # write them into a vector to ease further computation
+                # write them into a vector to ease further computation
 			ttsc = c(ttsc2,ttsc3,ttsc4)
 			
 			ttscsorted = sort(ttsc, decreasing = T, index.return = T)$x
