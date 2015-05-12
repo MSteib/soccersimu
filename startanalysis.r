@@ -31,5 +31,5 @@ write.csv(matrix1, file="outcomey.csv", row.names = F)
 
 # After doing all the analysis, you may like to try if your model works well when the x distribution changes.
 # e.g. if x is generated from normal distribution or uniform distribution, can your model perform as well?
-# In such a scenario, the f(x) rules remain the same but the X boundary changes. 
+# In such a scenario, the f(x) rules remain the same but the x's boundary changes. 
 # It might be a challenge to some kind of models.
