@@ -10,7 +10,7 @@ Here I made this experiment, to simulate how these aliens may perform on their c
 
 The best prediction accuracy I got now is 91.5%. Will go on developing more advanced models to achieve better performance. However one message is here to take home: These aliens have to watch mathces in >=3000 groups to get an idea of what they are guessing. That's equivalent to watching near 400 years of FIFA or UEFA cups, if they are held every year!
 #------------------------
-It is said a well built neural network algorithm can 'resemble' lots of complex, non-linear functions, successfully predicting y for a given x, without need to tackle what f(x) really is. Lots of examples are seen, like image recognition, automatic steering, etc. In this simulation, I am aimed to see and show off this super power. 
+It is said a well built artificial neural network algorithm can 'resemble' lots of complex, non-linear functions, successfully predicting y for a given x, without need to tackle what f(x) really is. Lots of examples are seen, like image recognition, automatic steering, where neural networks have done amazing jobs. In this simulation, I am aimed to see and show off this super power. 
 
 First, I generate a set of group match data and calculate the 'true' outcomes based on a set of rules, which are similar to European Championship rules. (Using historical data from UEFA may be another choice, but I personally think this data is not enough -- and it turns out not enough.) Then I will create a logistic regression programme and neural networks, to let them try to predict the outcomes, and see how well they can predict.
 
