@@ -8,7 +8,7 @@ They might try to guess out the rules (like "maybe kicking more goals would be g
 
 Here I made this experiment, to simulate how these aliens may perform on their computers.
 
-The best prediction accuracy I got now is 91.5%. Will go on developing more advanced models to achieve better performance. However one message is here to take home: These aliens have to watch mathces in >=3000 groups to get an idea of what they are guessing. That's equivalent to watching near 400 years of FIFA or UEFA cups, if they are held every year!
+The best prediction accuracy I got now is 91.5%. Will go on developing more advanced models to achieve better performance. However one message is here to take home: These aliens have to watch mathces in >=3000 groups to get an idea of what they are guessing. That's equivalent to watching near 400 years of FIFA or UEFA cups, if they are held every year! Hope they and their computers live long enough.
 #------------------------
 It is said a well built artificial neural network algorithm can 'resemble' lots of complex, non-linear functions, successfully predicting y for a given x, without need to tackle what f(x) really is. Lots of examples are seen, like image recognition, automatic steering, where neural networks have done amazing jobs. In this simulation, I am aimed to see and show off this super power. 
 
