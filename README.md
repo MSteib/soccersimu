@@ -46,7 +46,7 @@ My own Octave codes for machine learning are adapted from the resource in the on
 
 At this stage, I have found that the training sample size has to be >=3000 to get a steady prediction accuracy, no matter which learning algorithm I select. Using logistic regression, I got a prediction accuracy of ~75%, using a neural network with single hidden layer of 40 units, I got a prediction accuracy of 88.5-89%, and using a neural network with double hidden layers, each with 32 units, I got it 91.5-92%.
 
-Because my training, validation and test sets are essentially from the same population, in theory overfitting shouldn't be a problem, especially when you use the recommended sample size >=3000. Using regularization with lambda>=0.5 for neural network can only ruin the predictivity.
+Because my training, validation and test sets are essentially from the same population, in theory overfitting shouldn't be a problem, especially when you use the recommended sample size >=3000. Using regularization with lambda>=0.5 for neural network can only ruin the predictivity. However for logistic regression, a bigger lambda (around 10.0) is used for regularization to prevent overfitting.
 
 To play with this experiment, just use my R codes here to generate your own x and y matrices, building your training, validation and test sets, and code your own regression, svm or neural networks to see how well they can 'predict' the y from the x. It would be great if you manage up to >95% accuracy for the test set. If you get it >98%, please let me know the breaking news and I will appreciate it very much.
 
