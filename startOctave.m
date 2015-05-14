@@ -22,7 +22,10 @@ ytest = transformY(ytest);
 % back into a single column y like [3], to facilitate the calculation of prediction accuracy.
 % so if 'predictedy' is the predicted y matrix, you can calculate the accuracy like:
 accuracy = mean(double(transOneY(predictedy) == transOneY(y)))*100;
-% My practice has given an 88% accuracy with neural network of a single hidden layer and 91% with double hidden layers.
+% My practice has given an 
+% 75% accuracy with logistic regression, 
+% 88% accuracy with neural network of a single hidden layer, and
+% 91% with double hidden layers.
 % See how you may improve this. Good luck!
 
 % If instead of using transOneY(), you just calculate like:
